@@ -1,0 +1,88 @@
+{
+    "info": {
+        "_postman_id": "498daba2-98f9-4a94-a33d-f527f38a26bd",
+        "name": "hackathon",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "ADD Entity",
+            "id": "3a8416e2-325c-4738-b115-6c44de7e07e4",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{ \n  \"id\": \"Beach-Barra-1\",  \n  \"type\": \"Beach\",  \n  \"name\": {  \n    \"value\": \"Praia da barra\"  \n  }, \n  \"description\": {  \n    \"value\": \"a praia....\"  \n  },   \n  \"address\": {  \n    \"type\": \"PostalAddress\",  \n    \"value\": {  \n      \"addressCountry\": \"PT\",  \n      \"addressLocality\": \"Aveiro\"  \n    }  \n  },  \n  \"beachType\": {  \n    \"value\": [\"whiteSand\", \"urban\"]  \n  },  \n  \"occupationRate\": {  \n    \"value\": \"high\"  \n  },  \n  \"facilities\": {  \n    \"value\": [\"promenade\", \"showers\", \"cleaningServices\", \"lifeGuard\"]  \n  },  \n  \"accessType\": {\"value\":[\"privateVehicle\", \"onFoot\", \"publicTransport\"]},  \n  \"location\": {  \n    \"type\": \"geo:json\",  \n    \"value\": {  \n      \"type\": \"Point\",  \n      \"coordinates\": [-8.7697987, 40.6262383]  \n    }  \n  },\n  \"width\": {  \n    \"value\": 51  \n  },   \n  \"length\": {  \n    \"value\": 450  \n  },  \n  \"source\": {  \n    \"value\": \"\"  \n  }\n} ",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "localhost:1026/v2/entities"
+            },
+            "response": []
+        },
+        {
+            "name": "Get Entity",
+            "id": "f1bccd8d-fbb8-499c-9f06-7056ffc2fa83",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{ \n  \"id\": \"Beach-Barra-1\",  \n  \"type\": \"Beach\",  \n  \"name\": {  \n    \"value\": \"Praia da barra\"  \n  }, \n  \"description\": {  \n    \"value\": \"a praia....\"  \n  },   \n  \"address\": {  \n    \"type\": \"PostalAddress\",  \n    \"value\": {  \n      \"addressCountry\": \"PT\",  \n      \"addressLocality\": \"Aveiro\"  \n    }  \n  },  \n  \"beachType\": {  \n    \"value\": [\"whiteSand\", \"urban\"]  \n  },  \n  \"occupationRate\": {  \n    \"value\": \"high\"  \n  },  \n  \"facilities\": {  \n    \"value\": [\"promenade\", \"showers\", \"cleaningServices\", \"lifeGuard\"]  \n  },  \n  \"accessType\": {\"value\":[\"privateVehicle\", \"onFoot\", \"publicTransport\"]},  \n  \"location\": {  \n    \"type\": \"geo:json\",  \n    \"value\": {  \n      \"type\": \"Point\",  \n      \"coordinates\": [-8.7697987, 40.6262383]  \n    }  \n  },\n  \"width\": {  \n    \"value\": 51  \n  },   \n  \"length\": {  \n    \"value\": 450  \n  },  \n  \"source\": {  \n    \"value\": \"\"  \n  }\n} ",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "localhost:1026/v2/entities"
+            },
+            "response": []
+        },
+        {
+            "name": "Get Entity type bech",
+            "id": "1d04b71c-94ff-4f97-bbca-6d26a61d82ed",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{ \n  \"id\": \"Beach-Barra-1\",  \n  \"type\": \"Beach\",  \n  \"name\": {  \n    \"value\": \"Praia da barra\"  \n  }, \n  \"description\": {  \n    \"value\": \"a praia....\"  \n  },   \n  \"address\": {  \n    \"type\": \"PostalAddress\",  \n    \"value\": {  \n      \"addressCountry\": \"PT\",  \n      \"addressLocality\": \"Aveiro\"  \n    }  \n  },  \n  \"beachType\": {  \n    \"value\": [\"whiteSand\", \"urban\"]  \n  },  \n  \"occupationRate\": {  \n    \"value\": \"high\"  \n  },  \n  \"facilities\": {  \n    \"value\": [\"promenade\", \"showers\", \"cleaningServices\", \"lifeGuard\"]  \n  },  \n  \"accessType\": {\"value\":[\"privateVehicle\", \"onFoot\", \"publicTransport\"]},  \n  \"location\": {  \n    \"type\": \"geo:json\",  \n    \"value\": {  \n      \"type\": \"Point\",  \n      \"coordinates\": [-8.7697987, 40.6262383]  \n    }  \n  },\n  \"width\": {  \n    \"value\": 51  \n  },   \n  \"length\": {  \n    \"value\": 450  \n  },  \n  \"source\": {  \n    \"value\": \"\"  \n  }\n} ",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:1026/v2/entities?type=Beach",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "1026",
+                    "path": [
+                        "v2",
+                        "entities"
+                    ],
+                    "query": [
+                        {
+                            "key": "type",
+                            "value": "Beach"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
