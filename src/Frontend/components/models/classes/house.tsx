@@ -1,11 +1,10 @@
-
-import { Marker, Popup } from 'react-leaflet';
 import { DataModel } from '../dataModel';
 
 export class House extends DataModel {
-    coordinates: number[]
 
-    view: (model: House) => JSX.Element = HouseView;
+    popup(coordinate: number[]): JSX.Element {
+        return HousePopup(this, coordinate)
+    }
 
     constructor(
         id: string,
@@ -13,22 +12,16 @@ export class House extends DataModel {
         coordinates: number[],
         icon: string = "house.svg",
     ) {
-        super(id, name, icon)
-
-        this.coordinates = coordinates
+        super(id, name, icon, [coordinates])
     }
 }
 
-const HouseView = (house: House) => {
+const HousePopup = (house: House, coordinate: number[]) => {
     return (
         <>
-            <Marker 
-            position={[house.coordinates[0], house.coordinates[1]]}
-            draggable={false}
-            icon={house.icon}
-          >
-            <Popup>Hey ! I live here</Popup>
-          </Marker>
+           <h1>
+                Hey ! I live here
+           </h1>
         </>
     )
 }
