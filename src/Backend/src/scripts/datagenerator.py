@@ -1,13 +1,15 @@
 import json, requests
 
+DATA_FOLDER = '../data'
+
 if __name__=="__main__":
 
     # Opening JSON files
-    museum = json.load(open('museum.json'))
-    praca = json.load(open('pointOfInterest.json'))
-    bus = json.load(open('vehicle.json'))
-    # parkingGroup = json.load(open('parkingGroup.json'))
-    parkingSpots = json.load(open('parkingSpots.json'))
+    museum = json.load(open(f'{DATA_FOLDER}/museum.json'))
+    praca = json.load(open(f'{DATA_FOLDER}/pointOfInterest.json'))
+    bus = json.load(open(f'{DATA_FOLDER}/vehicle.json'))
+    # parkingGroup = json.load(open(f'{DATA_FOLDER}/parkingGroup.json'))
+    parkingSpots = json.load(open(f'{DATA_FOLDER}/parkingSpots.json'))
 
     url = 'http://localhost:1026/v2/entities'
 
