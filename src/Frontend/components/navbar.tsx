@@ -76,7 +76,7 @@ const Navbar = () => (
               <span className="sr-only">Mappable</span>
               <img
                 className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="./static/assets/images/logo-colored.jpeg"
                 alt=""
               />
             </a>
