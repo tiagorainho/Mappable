@@ -36,8 +36,8 @@ if __name__=="__main__":
             "value": {
             "type": "Point",
             "coordinates": [
-                40.639299,
-                -8.650949
+                -8.65110844373703,
+                40.63950059991235
             ]
             }
         },
@@ -124,8 +124,8 @@ if __name__=="__main__":
             "value": {
                 "type": "Point",
                 "coordinates": [
-                    40.6419924,
-                    -8.6557991
+                    -8.655306100845337,
+                    40.64247871616763
                 ]
             }
         },
@@ -154,11 +154,176 @@ if __name__=="__main__":
         }
     }
 
+    bus = {
+        "id": "vehicle:AveiroBus:1",
+        "type": "Vehicle",
+        "category": {
+            "type": "array",
+            "value": [
+            "municipalServices"
+            ]
+        },
+        "vehicleType": {
+            "type": "Text",
+            "value": "bus"
+        },
+        "name": {
+            "type": "Text",
+            "value": "AveiroBus linha 1"
+        },
+        "vehiclePlateIdentifier": {
+            "type": "Text",
+            "value": "3456ABC"
+        },
+        "refVehicleModel": {
+            "type": "Relationship",
+            "value": "vehiclemodel:econic"
+        },
+        "location": {
+            "type": "geo:json",
+            "value": {
+            "type": "Point",
+            "coordinates": [
+                -8.650799989700317,
+                40.638788233944155
+            ]
+            },
+            "metadata": {
+            "timestamp": {
+                "type": "DateTime",
+                "value": "2022-10-12T15:44:00"
+            }
+            }
+        },
+        "areaServed": {
+            "type": "Text",
+            "value": "Centro"
+        },
+        "serviceStatus": {
+            "type": "Text",
+            "value": "onRoute"
+        },
+        "cargoWeight": {
+            "type": "Number",
+            "value": 314
+        },
+        "speed": {
+            "type": "Number",
+            "value": 50,
+            "metadata": {
+            "timestamp": {
+                "type": "DateTime",
+                "value": "2022-10-12T15:44:00"
+            }
+            }
+        },
+        "serviceProvided": {
+            "type": "array",
+            "value": [
+            "publicTransportation"
+            ]
+        },
+        "bearing": {
+            "type": "Number",
+            "value": 43
+        },
+        "fuelEfficiency": {
+            "type": "Number",
+            "value": 13
+        },
+        "fuelType": {
+            "type": "Text",
+            "value": "Petrol"
+        },
+        "fuelFilled": {
+            "type": "Number",
+            "value": 6
+        },
+        "tripNetWeightCollected": {
+            "type": "Number",
+            "value": 12
+        },
+        "vehicleTrackerDevice": {
+            "type": "Text",
+            "value": "Installed"
+        },
+        "wardId": {
+            "type": "Text",
+            "value": "4"
+        },
+        "license_plate": {
+            "type": "Text",
+            "value": "KA052134"
+        },
+        "currentTripCount": {
+            "type": "Number",
+            "value": 1
+        },
+        "reportId": {
+            "type": "Text",
+            "value": "21645"
+        },
+        "zoneName": {
+            "type": "Text",
+            "value": "Center"
+        },
+        "vehicleAltitude": {
+            "type": "Number",
+            "value": 60
+        },
+        "deviceSimNumber": {
+            "type": "Text",
+            "value": "9942142573"
+        },
+        "wardName": {
+            "type": "Text",
+            "value": "Kempegowda Ward"
+        },
+        "deviceBatteryStatus": {
+            "type": "Text",
+            "value": "Connected"
+        },
+        "ignitionStatus": {
+            "type": "Boolean",
+            "value": True
+        },
+        "vehicleRunningStatus": {
+            "type": "Text",
+            "value": "running"
+        },
+        "observationDateTime": {
+            "type": "DateTime",
+            "value": "2022-10-22T15:47:02+05:30"
+        },
+        "serviceOnDuty": {
+            "type": "Boolean",
+            "value": True
+        },
+        "municipalityInfo": {
+            "type": "StructuredValue",
+            "value": {
+            "district": "Aveiro",
+            "ulbName": "Av",
+            "cityId": "23",
+            "wardId": "23",
+            "stateName": "Aveiro",
+            "cityName": "Aveiro",
+            "zoneName": "Centro",
+            "wardName": "Aveiro Centro",
+            "zoneId": "2",
+            "wardNum": 4
+            }
+        }
+    }
+
     url = 'http://localhost:1026/v2/entities'
 
     response = requests.post(url, json=museum, headers={'content-type':'application/json'})
     print(response.status_code)
 
     response = requests.post(url, json=praca, headers={'content-type':'application/json'})
+    print(response.status_code)
+
+    response = requests.post(url, json=bus, headers={'content-type':'application/json'})
     print(response.status_code)
     
