@@ -1,14 +1,13 @@
 import { DataModel } from '../dataModel';
 
 export class Beach extends DataModel {
+
+    static iconUrl = "beach.svg"
     
     constructor(
-        id: string,
-        name: string,
-        coordinates: number[],
-        icon: string = "beach.svg"
+        arg: any
     ) {
-        super(id, name, icon, [coordinates])
+        super({id: arg.id, name: arg.name.value, icon: Beach.iconUrl, coordinates: [arg.location.value.coordinates]})
     }
 
     popup(coordinate: number[]): JSX.Element {

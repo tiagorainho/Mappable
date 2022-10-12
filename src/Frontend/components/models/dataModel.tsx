@@ -4,32 +4,29 @@ import { Marker, Popup } from 'react-leaflet';
 
 export const BASE_ICONS = "../../../static/assets/icons"
 
-export interface IDataModel {
-  id: string
-  name: string
-  icon: Icon
-  coordinates: number[][]
+type DataModelType = {
+  id: string,
+  name: string,
+  icon: string,
+  coordinates: number[][],
 }
 
-export abstract class DataModel implements IDataModel {
+export abstract class DataModel {
   id: string
   name: string
   icon: Icon
   coordinates: number[][]
 
   constructor(
-    id: string,
-    name: string,
-    icon: string,
-    coordinates: number[][],
+    arg: DataModelType
   ) {
-    this.id = id;
-    this.name = name;
+    this.id = arg.id;
+    this.name = arg.name;
     this.icon = new Icon({
-      iconUrl: `${BASE_ICONS}/${icon}`,
+      iconUrl: `${BASE_ICONS}/${arg.icon}`,
       iconSize: [25, 25]
     });
-    this.coordinates = coordinates
+    this.coordinates = arg.coordinates
   }
 
   marker(): JSX.Element {
@@ -58,12 +55,12 @@ export const GenericMarker = (model: DataModel) => {
   )
 }
 
-type DataModelType = {
+type DataModelPopupType = {
   model: DataModel
   coordinate: number[]
 }
 
-export const GenericPopup = (data: DataModelType) => {
+export const GenericPopup = (data: DataModelPopupType) => {
   return (
     <>
       <Popup>

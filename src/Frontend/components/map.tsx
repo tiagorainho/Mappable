@@ -2,42 +2,32 @@ import { MapContainer, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import "leaflet-defaulticon-compatibility";
-import { useState } from 'react'
-import { ModelFactory } from './models/factory';
+import { useState, useEffect } from 'react'
+import { DataModelType, ModelFactory } from './models/factory';
+import { DataModel } from './models/dataModel';
+import { Spinner } from './spinner';
+import { CENTER_DEFAULT, ENDPOINT, ZOOM_DEFAULT } from '../env';
 
 const Map = () => {
-  const [center, setCenter] = useState({ lat: 40.6338, lng: 8.6492 })
-  const ZOOM_LEVEL = 9
+  const ZOOM_LEVEL = ZOOM_DEFAULT
 
-  const markers_url = [
-    {
-      'id': 'house-id',
-      'name': 'casa',
-      'type': 'house',
-      'location': {
-        'type': 'Point',
-        'coordinates': [40.6338, 8.6492]
-      }
-    },
-    {
-      'id': 'person-id',
-      'name': 'person',
-      'type': 'person',
-      'location': {
-        'type': 'Point',
-        'coordinates': [40.6398, 8.6432]
-      }
-    }
-  ]
+  const [markers, setMarkers]  = useState<DataModel[]>([])
+  const [isLoading, setLoading] = useState(false)
+  const [center, setCenter] = useState(CENTER_DEFAULT)
 
-  const modelMarkers = markers_url.map(marker => {
-    return ModelFactory.createObject(marker)
-  })
+  useEffect(() => {
+    setLoading(true)
+    fetch(`${ENDPOINT}/objects`, {method: 'GET'})
+      .then((res) => res.json())
+      .then((data) => {
+        data = data.map((obj: DataModelType) => ModelFactory.createObject(obj))
+        console.log(data)
+        setMarkers(data)
+        setLoading(false)
+      })
+  }, [])
 
-  console.log(modelMarkers)
-  
-  const [markers, setMarkers] = useState(modelMarkers)
-  
+  if(isLoading) return <Spinner/>
 
   return (
     <>

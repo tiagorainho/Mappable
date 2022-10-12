@@ -5,26 +5,50 @@ import { Building } from "./classes/building";
 import { House } from "./classes/house";
 import { Person } from "./classes/person";
 import { Unknown } from "./classes/unknown";
+import { Museum } from "./classes/museum";
+import { PointOfInterest } from "./classes/pointOfInterest";
+import { ParkingSpot } from "./classes/parkingSpot";
+import { Vehicle } from "./classes/vehicle";
 
-type modelWithType = {
+export type DataModelType = {
     id: string
     name: string
     type: string
     location: {
         type: string
-        coordinates: number[]
+        value: {
+            coordinates: number[]
+        }
     }
+    cargoWeight: number
+    category: string[]
+    fuelEfficiency: number
+    fuelFilled: number
+    fuelType: string
+    licensePlate: string
 }
 
 export class ModelFactory {
-    static createObject(obj: modelWithType): DataModel {
+
+    static switch_coordinates(coordinates: number[]): number[] {
+        return [coordinates[1], coordinates[0]]
+    }
+
+    static createObject(obj: DataModelType): DataModel {
+
+        obj.location.value.coordinates = ModelFactory.switch_coordinates(obj.location.value.coordinates)
 
         switch(obj.type) {
-            case 'beach': return new Beach(obj.id, obj.name, obj.location.coordinates)
-            case 'building': return new Building(obj.id, obj.name, obj.location.coordinates)
-            case 'house': return new House(obj.id, obj.name, obj.location.coordinates)
-            case 'person': return new Person(obj.id, obj.name, obj.location.coordinates)
+            case 'beach': return new Beach(obj)
+            case 'building': return new Building(obj)
+            case 'house': return new House(obj)
+            case 'person': return new Person(obj)
+            case 'person': return new Person(obj)
+            case 'Museum': return new Museum(obj)
+            case 'PointOfInterest': return new PointOfInterest(obj)
+            case 'Vehicle': return new Vehicle(obj)
+            case 'ParkingSpot': return new ParkingSpot(obj)
         }
-        return new Unknown(obj.id, obj.name, obj.location.coordinates)
+        return new Unknown(obj)
     }
 }

@@ -6,13 +6,12 @@ export class House extends DataModel {
         return HousePopup(this, coordinate)
     }
 
+    static iconUrl = "beach.svg"
+    
     constructor(
-        id: string,
-        name: string,
-        coordinates: number[],
-        icon: string = "house.svg",
+        arg: any
     ) {
-        super(id, name, icon, [coordinates])
+        super({id: arg.id, name: arg.name.value, icon: House.iconUrl, coordinates: [arg.location.value.coordinates]})
     }
 }
 
