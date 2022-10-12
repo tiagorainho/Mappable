@@ -12,7 +12,7 @@ const Footer = () => (
         >
           Aveiro Tech City - {' '}
           <span className="my-auto">
-            <Image src="/static/assets/images/brand.jpeg" alt="Vercel Logo" width={64} height={18} />
+            <Image src="/static/assets/images/brand.jpeg" alt="Mappable Logo" width={64} height={18} />
           </span>
         </a>
       </div>
