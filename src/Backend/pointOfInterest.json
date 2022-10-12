@@ -1,0 +1,57 @@
+{
+    "id": "PracaPeixe",
+    "type": "PointOfInterest",
+    "category": {
+        "type": "array",
+        "value": [
+            "113"
+        ]
+    },
+    "description": {
+        "type": "Text",
+        "value": "La Playa de A Concha se presenta como una continuaciin de la Playa de Compostela, una de las mis frecuentadas de Vilagarcia."
+    },
+    "refSeeAlso": {
+        "type": "array",
+        "value": [
+            "Museum-Santa-Joana"
+        ]
+    },
+    "source": {
+        "type": "Text",
+        "value": "https://www.google.pt/maps/"
+    },
+    "location": {
+        "type": "geo:json",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -8.655306100845337,
+                40.64247871616763
+            ]
+        }
+    },
+    "address": {
+        "type": "PostalAddress",
+        "value": {
+            "addressCountry": "PT",
+            "addressLocality": "Aveiro"
+        }
+    },
+    "name": {
+        "type": "Text",
+        "value": "Praça do Peixe"
+    },
+    "wardId": {
+        "type": "Text",
+        "value": ""
+    },
+    "zoneId": {
+        "type": "Text",
+        "value": ""
+    },
+    "zoneName": {
+        "type": "Text",
+        "value": ""
+    }
+}
