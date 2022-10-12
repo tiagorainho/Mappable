@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Layout from '../components/Layout'
 import InteractiveMap from '../components/interactiveMap'
 import MapHandler from '../components/mapHandler'
