@@ -1,0 +1,65 @@
+{
+    "id": "hospital-park",
+    "type": "ParkingGroup",
+    "category": {
+      "value": ["onstreet", "adjacentSpaces", "feeCharged"]
+    },
+    "permitActiveHours": {
+      "value": "null"
+    },
+    "requiredPermit": {
+      "value": ""
+    },
+    "allowedVehicleType": {
+      "value": "car"
+    },
+    "availableSpotNumber": {
+      "value": 3,
+      "metadata": {
+        "timestamp": {
+          "type": "DateTime",
+          "value": "2022-10-12T17:17:00"
+        }
+      }
+    },
+    "totalSpotNumber": {
+      "value": 7
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+                -8.657198399305344,
+                40.634184131136685
+              ],
+              [
+                -8.65702137351036,
+                40.634053860125405
+              ],
+              [
+                -8.656570762395859,
+                40.63449861245241
+              ],
+              [
+                -8.656372278928757,
+                40.63482225187151
+              ],
+              [
+                -8.657198399305344,
+                40.634184131136685
+              ]
+          ]
+        ]
+      }
+    },
+    "chargeType": {
+      "value": ["firstIntervalPrice"]
+    },
+    "description": {
+      "value": "Hospital park"
+    }
+  }
+  

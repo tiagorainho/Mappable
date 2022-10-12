@@ -1,0 +1,212 @@
+[
+    {
+        "id": "hospital-park-spot13",
+        "type": "ParkingSpot",
+        "status": {
+            "value": "free",
+            "metadata": {
+                "timestamp": {
+                    "type": "DateTime",
+                    "value": "2022-10-12T17:11:00"
+                },
+                "parkingPermit": {
+                    "type": "Property",
+                    "value": "yes"
+                }
+            }
+        },
+        "category": {
+            "value": ["onStreet"]
+        },
+        "name": {
+            "value": "A-13"
+        },
+        "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [-8.657120615243912, 40.63423094721926]
+            }
+        }
+    },
+    {
+        "id": "hospital-park-spot14",
+        "type": "ParkingSpot",
+        "status": {
+            "value": "free",
+            "metadata": {
+                "timestamp": {
+                    "type": "DateTime",
+                    "value": "2022-10-12T17:11:00"
+                },
+                "parkingPermit": {
+                    "type": "Property",
+                    "value": "yes"
+                }
+            }
+        },
+        "category": {
+            "value": ["onStreet"]
+        },
+        "name": {
+            "value": "A-14"
+        },
+        "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [-8.656907379627228, 40.63434391632688]
+            }
+        }
+    },
+    {
+        "id": "hospital-park-spot30",
+        "type": "ParkingSpot",
+        "status": {
+            "value": "free",
+            "metadata": {
+                "timestamp": {
+                    "type": "DateTime",
+                    "value": "2022-10-12T17:11:00"
+                },
+                "parkingPermit": {
+                    "type": "Property",
+                    "value": "yes"
+                }
+            }
+        },
+        "category": {
+            "value": ["onStreet"]
+        },
+        "name": {
+            "value": "A-30"
+        },
+        "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [-8.65666463971138, 40.63443856597254]
+            }
+        }
+    },
+    {
+        "id": "hospital-park-spot35",
+        "type": "ParkingSpot",
+        "status": {
+            "value": "free",
+            "metadata": {
+                "timestamp": {
+                    "type": "DateTime",
+                    "value": "2022-10-12T17:11:00"
+                },
+                "parkingPermit": {
+                    "type": "Property",
+                    "value": "yes"
+                }
+            }
+        },
+        "category": {
+            "value": ["onStreet"]
+        },
+        "name": {
+            "value": "A-35"
+        },
+        "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [-8.656715601682661, 40.63440396289183]
+            }
+        }
+    },
+    {
+        "id": "hospital-park-spot40",
+        "type": "ParkingSpot",
+        "status": {
+            "value": "free",
+            "metadata": {
+                "timestamp": {
+                    "type": "DateTime",
+                    "value": "2022-10-12T17:11:00"
+                },
+                "parkingPermit": {
+                    "type": "Property",
+                    "value": "yes"
+                }
+            }
+        },
+        "category": {
+            "value": ["onStreet"]
+        },
+        "name": {
+            "value": "A-40"
+        },
+        "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [-8.656762540340424, 40.634377501700364]
+            }
+        }
+    },
+    {
+        "id": "hospital-park-spot41",
+        "type": "ParkingSpot",
+        "status": {
+            "value": "free",
+            "metadata": {
+                "timestamp": {
+                    "type": "DateTime",
+                    "value": "2022-10-12T17:11:00"
+                },
+                "parkingPermit": {
+                    "type": "Property",
+                    "value": "yes"
+                }
+            }
+        },
+        "category": {
+            "value": ["onStreet"]
+        },
+        "name": {
+            "value": "A-41"
+        },
+        "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [-8.65695834159851,40.6341515634077]
+            }
+        }
+    },
+    {
+        "id": "hospital-park-spot42",
+        "type": "ParkingSpot",
+        "status": {
+            "value": "free",
+            "metadata": {
+                "timestamp": {
+                    "type": "DateTime",
+                    "value": "2022-10-12T17:11:00"
+                },
+                "parkingPermit": {
+                    "type": "Property",
+                    "value": "yes"
+                }
+            }
+        },
+        "category": {
+            "value": ["onStreet"]
+        },
+        "name": {
+            "value": "A-42"
+        },
+        "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [-8.657018691301346, 40.634100676299354]
+            }
+        }
+    }
+]
