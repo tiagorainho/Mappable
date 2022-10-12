@@ -1,0 +1,93 @@
+{
+    "id": "Museum-Santa-Joana",
+    "type": "Museum",
+    "address": {
+        "type": "PostalAddress",
+        "value": {
+        "addressCountry": "PT",
+        "addressLocality": "Aveiro",
+        "streetAddress": "Av. Santa Joana, 3810-164 Aveiro"
+        }
+    },
+    "alternateName": {
+        "value": "MSJ"
+    },
+    "artPeriod": {
+        "value": [
+        "contemporary"
+        ]
+    },
+    "description": {
+        "value": "Museu de arte sacra num convento do séc. XV com uma igreja barroca e o túmulo da Princesa Santa Joana."
+    },
+    "facilities": {
+        "value": [
+        "shop",
+        "cloakRoom",
+        "guidedTour"
+        ]
+    },
+    "location": {
+        "type": "geo:json",
+        "value": {
+        "type": "Point",
+        "coordinates": [
+            -8.65110844373703,
+            40.63950059991235
+        ]
+        }
+    },
+    "museumType": {
+        "value": [
+        "fineArts"
+        ]
+    },
+    "name": {
+        "value": "Museu de Santa Joana"
+    },
+    "openingHoursSpecification": {
+        "value": [
+        {
+            "dayOfWeek": "Monday",
+            "closes": "19:30:00",
+            "opens": "11:00:00"
+        },
+        {
+            "dayOfWeek": "Tuesday",
+            "closes": "19:30:00",
+            "opens": "11:00:00"
+        },
+        {
+            "dayOfWeek": "Wednesday",
+            "closes": "19:30:00",
+            "opens": "11:00:00"
+        },
+        {
+            "dayOfWeek": "Thurday",
+            "closes": "19:30:00",
+            "opens": "11:00:00"
+        },
+        {
+            "dayOfWeek": "Friday",
+            "closes": "19:30:00",
+            "opens": "11:00:00"
+        },
+        {
+            "dayOfWeek": "Saturday",
+            "closes": "21:00:00",
+            "opens": "10:00:00"
+        },
+        {
+            "dayOfWeek": "Sunday",
+            "closes": "15:00:00",
+            "opens": "10:00:00"
+        }
+        ]
+    },
+    "source": {
+        "value": "http://www.patrimoniocultural.pt/pt/museus-e-monumentos/rede-portuguesa/m/museu-de-aveiro/"
+    },
+    "touristArea": {
+        "value": "Aveiro"
+    }
+}
