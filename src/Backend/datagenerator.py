@@ -9,6 +9,8 @@ if __name__=="__main__":
     # parkingGroup = json.load(open('parkingGroup.json'))
     parkingSpots = json.load(open('parkingSpots.json'))
 
+    busStops = json.load(open('bus_stations.json'))
+
     url = 'http://localhost:1026/v2/entities'
 
     response = requests.post(url, json=museum, headers={'content-type':'application/json'})
@@ -24,6 +26,10 @@ if __name__=="__main__":
     # print(response.status_code)
 
     for ps in parkingSpots:
+        response = requests.post(url, json=ps, headers={'content-type':'application/json'})
+        print(response.status_code)
+
+    for ps in busStops:
         response = requests.post(url, json=ps, headers={'content-type':'application/json'})
         print(response.status_code)
     
