@@ -1,33 +1,24 @@
-import { Marker, Popup } from 'react-leaflet';
 import { DataModel } from "../dataModel";
 
 export class Unknown extends DataModel {
-    coordinates: number[]
 
-    view: (model: Unknown) => JSX.Element = UnknownView;
-
+    static iconUrl = "beach.svg"
+    
     constructor(
-        id: string,
-        name: string,
-        coordinates: number[],
-        icon: string = "unknown.svg",
+        arg: any
     ) {
-        super(id, name, icon)
+        super({id: arg.id, name: arg.name.value, icon: Unknown.iconUrl, coordinates: [arg.location.value.coordinates]})
+    }
 
-        this.coordinates = coordinates
+    popup(coordinate: number[]): JSX.Element {
+        return UnknownPopup(this, coordinate)
     }
 }
 
-const UnknownView = (model: Unknown) => {
+const UnknownPopup = (model: Unknown, coordinate: number[]) => {
     return (
         <>
-            <Marker 
-                position={[model.coordinates[0], model.coordinates[1]]}
-                draggable={false}
-                icon={model.icon}
-            >
-                <Popup>Unknown Object</Popup>
-            </Marker>
+            Unknown Object
         </>
     )
 }
