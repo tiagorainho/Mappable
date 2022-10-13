@@ -12,7 +12,10 @@ if __name__=="__main__":
     # parkingGroup = json.load(open(f'{DATA_FOLDER}/parkingGroup.json'))
     parkingSpots = json.load(open(f'{DATA_FOLDER}/parkingSpots.json'))
 
-    busStops = json.load(open(f'{DATA_FOLDER}/bus_stations.json'))    
+    busStops = json.load(open(f'{DATA_FOLDER}/bus_stations.json')) 
+
+    url = 'http://localhost:1026/v2/entities'
+       
 
     response = requests.post(url, json=museum, headers={'content-type':'application/json'})
     print(response.status_code)
