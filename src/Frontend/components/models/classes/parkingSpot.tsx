@@ -3,6 +3,7 @@ import { DataModel } from '../dataModel';
 export class ParkingSpot extends DataModel {
     status: string
     parkingPermit: string
+    typeOfPermit: string
 
     static iconUrl = "person.svg"
     
@@ -13,6 +14,7 @@ export class ParkingSpot extends DataModel {
         
         this.status = arg.status.value
         this.parkingPermit = arg.status.metadata.parkingPermit.value
+        this.typeOfPermit = arg.status.metadata.parkingPermit.type
     }
 
     popup(coordinate: number[]): JSX.Element {
