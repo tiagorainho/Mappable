@@ -1,11 +1,12 @@
-import { DataModel } from '../dataModel';
+import { Icon } from 'leaflet';
+import { DataModel , BASE_ICONS} from '../dataModel';
 
 export class ParkingSpot extends DataModel {
     status: string
     parkingPermit: string
     typeOfPermit: string
 
-    static iconUrl = "person.svg"
+    static iconUrl = "spot.svg"
     
     constructor(
         arg: any
@@ -26,10 +27,19 @@ export class ParkingSpot extends DataModel {
 const ParkingSpotPopup = (parkingSpot: ParkingSpot, coordinate: number[]) => {
     return (
       <>
-        <h1>ParkingSpot</h1>
-        <span>{parkingSpot.status}</span>
-        <br></br>
-        <span>{parkingSpot.parkingPermit}</span>
+        <img title="Estacionamento" style={{display: "inline", width: "8%", marginRight: "5px", marginBottom: "5px"}} src={`${BASE_ICONS}/spot_mini.svg`}></img>
+        <span style={{color:"#457685",fontSize: "initial"}}>Lugar : {parkingSpot.name}</span>
+        <div>
+          <span><b>Status</b> :</span>
+          {(parkingSpot.status=="free")?(<img style={{display: "inline", width: "10%", marginLeft: "5px"}} src={`${BASE_ICONS}/free.svg`}></img>):(<img style={{display: "inline", width: "10%", marginLeft: "5px"}} src={`${BASE_ICONS}/ocup.svg`}></img>)}
+        </div>
+        <div style={{marginTop: "6px"}}>
+          <div>
+            <span><b>Licença:</b> </span>
+            {(parkingSpot.parkingPermit=="yes")?(<img style={{display: "inline", width: "10%", marginLeft: "5px"}} src={`${BASE_ICONS}/yes.svg`}></img>):(<img style={{display: "inline", width: "10%", marginLeft: "5px"}} src={`${BASE_ICONS}/no.svg`}></img>)}
+          </div>
+          <span style={{padding: "6px 12px"}}>Tipo de Licença: {parkingSpot.typeOfPermit}</span>
+        </div>
       </>
     )
   }
