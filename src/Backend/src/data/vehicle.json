@@ -1,5 +1,5 @@
 {
-    "id": "vehicle:AveiroBus:1",
+    "id": "vehicle:AveiroBus:",
     "type": "Vehicle",
     "category": {
         "type": "array",
