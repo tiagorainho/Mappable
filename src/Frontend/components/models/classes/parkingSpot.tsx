@@ -11,7 +11,7 @@ export class ParkingSpot extends DataModel {
     constructor(
         arg: any
     ) {
-        super({id: arg.id, type:arg.type, name: arg.name.value, icon: ParkingSpot.iconUrl, coordinates: [arg.location.value.coordinates]})
+        super({id: arg.id, type:arg.type, cluster_icon:"cluster_parking_spot.svg", name: arg.name.value, icon: ParkingSpot.iconUrl, coordinates: [arg.location.value.coordinates]})
         
         this.status = arg.status.value
         this.parkingPermit = arg.status.metadata.parkingPermit.value

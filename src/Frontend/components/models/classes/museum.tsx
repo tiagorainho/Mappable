@@ -17,7 +17,7 @@ export class Museum extends DataModel {
     constructor(
         arg: any
     ) {
-        super({id: arg.id, type:arg.type, name: arg.name.value, icon: Museum.iconUrl, coordinates: [arg.location.value.coordinates]})
+        super({id: arg.id, type:arg.type, cluster_icon:"cluster_museum.svg", name: arg.name.value, icon: Museum.iconUrl, coordinates: [arg.location.value.coordinates]})
 
         this.address = arg.address.value.streetAddress
         this.description = arg.description.value

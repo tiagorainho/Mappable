@@ -10,6 +10,7 @@ type DataModelType = {
   type: string
   name: string,
   icon: string,
+  cluster_icon: string,
   coordinates: number[][],
 }
 
@@ -32,7 +33,7 @@ export abstract class DataModel {
       iconSize: [25, 25]
     });
     this.cluster_icon = new Icon({
-      iconUrl: `${BASE_ICONS}/cluster.svg`,
+      iconUrl: `${BASE_ICONS}/${arg.cluster_icon}`,
       iconSize: [35, 35]
     })
     this.coordinates = arg.coordinates

@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { ComponentType } from "react";
 
 const customStyle = {
     position: 'absolute',
@@ -12,13 +13,13 @@ const customStyle = {
 }
 
 const InteractiveMap = (props : any) => {
-    const MapWithNoSSR = dynamic(() => import("../components/" + props.map), {
+    const MapWithNoSSR: ComponentType<any> = dynamic(() => import("../components/" + props.map), {
         ssr: false
     });
 
     return (
         <div className="map-container" style={customStyle} >
-            <MapWithNoSSR />
+            <MapWithNoSSR typeOfObjects={props.typeOfObjects}/>
         </div>
     )
 }

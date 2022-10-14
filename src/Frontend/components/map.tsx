@@ -23,7 +23,7 @@ const UpdateZoom = (prop: Props) => {
   return <></>
 }
 
-const Map = () => {
+const Map = (props: any) => {
 
   const [markers, setMarkers]  = useState<DataModel[]>([])
   const [clusters, setClusters]  = useState<Cluster[]>([])
@@ -65,7 +65,7 @@ const Map = () => {
     }, REFRESH_MS);
     return () => clearInterval(interval);
   }, []);
-
+  
 
   if(isLoading) return <Spinner/>
 

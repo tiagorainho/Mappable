@@ -20,11 +20,12 @@ export class PublicTransportStop extends DataModel {
     }[]
 
     static iconUrl = "busstop.svg"
+    static iconUrlCluster = "cluster_bus_stop.svg"
     
     constructor(
         arg: any
     ) {
-        super({id: arg.id, type:arg.type, name: arg.name.value, icon: PublicTransportStop.iconUrl, coordinates: [arg.location.value.coordinates]})
+        super({id: arg.id, cluster_icon:PublicTransportStop.iconUrlCluster, type:arg.type, name: arg.name.value, icon: PublicTransportStop.iconUrl, coordinates: [arg.location.value.coordinates]})
         
         this.wheelchairAccessible = arg.wheelchairAccessible.value
         this.peopleCount = arg.peopleCount.value
