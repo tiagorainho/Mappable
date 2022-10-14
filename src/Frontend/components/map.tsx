@@ -41,6 +41,7 @@ const Map = () => {
     fetch(`${ENDPOINT}/clusters?zoom=${zoom}`, {method: 'GET'})
       .then((res) => res.json())
       .then((data) => {
+        console.log(zoom)
         const objects = data.objects.map((obj: DataModelType) => ModelFactory.createObject(obj))
 
         const clusters_data = data.clusters.map((cluster: typeClusterType) => {

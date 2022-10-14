@@ -7,7 +7,7 @@ export class Person extends DataModel {
     constructor(
         arg: any
     ) {
-        super({id: arg.id, name: arg.name.value, icon: Person.iconUrl, coordinates: [arg.location.value.coordinates]})
+        super({id: arg.id, type:arg.type, name: arg.name.value, icon: Person.iconUrl, coordinates: [arg.location.value.coordinates]})
     }
 
     popup(coordinate: number[]): JSX.Element {

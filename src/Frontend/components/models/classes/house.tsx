@@ -11,7 +11,7 @@ export class House extends DataModel {
     constructor(
         arg: any
     ) {
-        super({id: arg.id, name: arg.name.value, icon: House.iconUrl, coordinates: [arg.location.value.coordinates]})
+        super({id: arg.id, type:arg.type, name: arg.name.value, icon: House.iconUrl, coordinates: [arg.location.value.coordinates]})
     }
 }
 

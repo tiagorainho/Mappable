@@ -9,7 +9,6 @@ ROLES = {
         ZoomRules(
             preference= {
                 14: ["Museum"],
-                15: ["Vehicle"],
                 17: ["ParkingSpot"]
             },
         ),

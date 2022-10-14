@@ -7,6 +7,7 @@ export const BASE_ICONS = "../../../static/assets/icons"
 
 type DataModelType = {
   id: string,
+  type: string
   name: string,
   icon: string,
   coordinates: number[][],
@@ -15,6 +16,7 @@ type DataModelType = {
 export abstract class DataModel {
   id: string
   name: string
+  type: string
   icon: Icon
   cluster_icon: Icon
   coordinates: number[][]
@@ -24,13 +26,14 @@ export abstract class DataModel {
   ) {
     this.id = arg.id;
     this.name = arg.name;
+    this.type = arg.type
     this.icon = new Icon({
       iconUrl: `${BASE_ICONS}/${arg.icon}`,
       iconSize: [25, 25]
     });
     this.cluster_icon = new Icon({
       iconUrl: `${BASE_ICONS}/cluster.svg`,
-      iconSize: [25, 25]
+      iconSize: [35, 35]
     })
     this.coordinates = arg.coordinates
   }
@@ -40,11 +43,7 @@ export abstract class DataModel {
   }
 
   cluster_popup(cluster: Cluster): JSX.Element {
-    return (
-      <>
-        Sou o {cluster.dataModel.id}
-      </>
-    )
+    return GenericClusterPopup(cluster)
   }
 
   marker(): JSX.Element {
@@ -91,6 +90,18 @@ export const GenericPopup = (data: DataModelPopupType) => {
         <hr className="my-2"></hr>
         {data.model.popup(data.coordinate)}  
       </Popup>
+    </>
+  )
+}
+
+export const GenericClusterPopup = (cluster: Cluster) => {
+  return (
+    <>
+      <span>Group of </span><span>{cluster.dataModel.type}</span>
+      <hr className='my-2'></hr>
+
+      <span>Number: </span>
+      <span>{cluster.dataModels.length}</span>
     </>
   )
 }

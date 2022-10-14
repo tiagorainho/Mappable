@@ -64,7 +64,10 @@ def get_entities(arguments: Dict[str, str], zoomRules: ZoomRules = ZoomRules(), 
                 objects.remove(coordinates_to_object[tuple(coordinate)])
             
             # add center of the cluster
-            cluster_center = median(coordinates)
+            try:
+                cluster_center = median(coordinates)
+            except:
+                print(coordinates)
             clusters[idx]["center"] = cluster_center
             
 
