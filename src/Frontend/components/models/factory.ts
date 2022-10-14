@@ -9,6 +9,7 @@ import { Museum } from "./classes/museum";
 import { PointOfInterest } from "./classes/pointOfInterest";
 import { ParkingSpot } from "./classes/parkingSpot";
 import { Vehicle } from "./classes/vehicle";
+import { PublicTransportStop } from "./classes/busStop";
 
 export type DataModelType = {
     id: string
@@ -53,6 +54,7 @@ export class ModelFactory {
             case 'PointOfInterest': return new PointOfInterest(obj)
             case 'Vehicle': return new Vehicle(obj)
             case 'ParkingSpot': return new ParkingSpot(obj)
+            case 'PublicTransportStop': return new PublicTransportStop(obj)
         }
         return new Unknown(obj)
     }

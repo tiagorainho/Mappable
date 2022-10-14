@@ -57,25 +57,11 @@
         },
         "peopleCount": {
             "type": "Number",
-            "value": 0
+            "value": 2
         }, 
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -115,6 +101,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -129,10 +129,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:CTT",
@@ -182,7 +183,7 @@
         },
         "wheelchairAccessible": {
             "type": "Number",
-            "value": 0
+            "value": 1
         },
         "transportationType": {
             "type": "StructuredValue",
@@ -197,20 +198,6 @@
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -250,6 +237,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -264,10 +265,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:OITA",
@@ -317,7 +319,7 @@
         },
         "wheelchairAccessible": {
             "type": "Number",
-            "value": 0
+            "value": 1
         },
         "transportationType": {
             "type": "StructuredValue",
@@ -327,25 +329,11 @@
         },
         "peopleCount": {
             "type": "Number",
-            "value": 0
+            "value": 1
         }, 
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -385,6 +373,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -399,10 +401,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:Capitania",
@@ -452,7 +455,7 @@
         },
         "wheelchairAccessible": {
             "type": "Number",
-            "value": 0
+            "value": 2
         },
         "transportationType": {
             "type": "StructuredValue",
@@ -462,25 +465,11 @@
         }, 
         "peopleCount": {
             "type": "Number",
-            "value": 0
+            "value": 5
         }, 
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -520,6 +509,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -534,10 +537,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:Cacadores",
@@ -587,7 +591,7 @@
         },
         "wheelchairAccessible": {
             "type": "Number",
-            "value": 0
+            "value": 2
         },
         "transportationType": {
             "type": "StructuredValue",
@@ -602,20 +606,6 @@
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -655,6 +645,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -669,10 +673,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:SantaJoana",
@@ -722,7 +727,7 @@
         },
         "wheelchairAccessible": {
             "type": "Number",
-            "value": 0
+            "value": 1
         },
         "transportationType": {
             "type": "StructuredValue",
@@ -732,25 +737,11 @@
         }, 
         "peopleCount": {
             "type": "Number",
-            "value": 0
+            "value": 1
         }, 
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -790,6 +781,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -804,10 +809,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:AntigaReitoriaB",
@@ -857,7 +863,7 @@
         },
         "wheelchairAccessible": {
             "type": "Number",
-            "value": 0
+            "value": 1
         },
         "transportationType": {
             "type": "StructuredValue",
@@ -867,25 +873,11 @@
         }, 
         "peopleCount": {
             "type": "Number",
-            "value": 0
+            "value": 4
         }, 
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -925,6 +917,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -939,10 +945,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:AntigaReitoriaA",
@@ -992,7 +999,7 @@
         },
         "wheelchairAccessible": {
             "type": "Number",
-            "value": 0
+            "value": 1
         },
         "transportationType": {
             "type": "StructuredValue",
@@ -1002,25 +1009,11 @@
         }, 
         "peopleCount": {
             "type": "Number",
-            "value": 0
+            "value": 2
         }, 
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -1060,6 +1053,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -1074,10 +1081,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:Castro",
@@ -1127,7 +1135,7 @@
         },
         "wheelchairAccessible": {
             "type": "Number",
-            "value": 0
+            "value": 1
         },
         "transportationType": {
             "type": "StructuredValue",
@@ -1137,25 +1145,11 @@
         }, 
         "peopleCount": {
             "type": "Number",
-            "value": 0
+            "value": 1
         }, 
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -1195,6 +1189,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -1209,10 +1217,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:IscaA",
@@ -1262,7 +1271,7 @@
         },
         "wheelchairAccessible": {
             "type": "Number",
-            "value": 0
+            "value": 2
         },
         "transportationType": {
             "type": "StructuredValue",
@@ -1272,25 +1281,11 @@
         }, 
         "peopleCount": {
             "type": "Number",
-            "value": 0
+            "value": 2
         }, 
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -1330,6 +1325,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -1344,10 +1353,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:IscaB",
@@ -1397,7 +1407,7 @@
         },
         "wheelchairAccessible": {
             "type": "Number",
-            "value": 0
+            "value": 2
         },
         "transportationType": {
             "type": "StructuredValue",
@@ -1412,20 +1422,6 @@
         "openingHoursSpecification": {
             "type": "StructuredValue",
             "value": [
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
-                        "value": "Friday"
-                    }
-                },
                 {
                     "opens" : {
                         "type": "string", 
@@ -1465,6 +1461,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -1479,10 +1489,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     },{
         "id": "BusStop:Hospital",
@@ -1558,20 +1569,6 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Friday"
-                    }
-                },
-                {
-                    "opens" : {
-                        "type": "string", 
-                        "value": "00:01"
-                    },
-                    "closes": {
-                        "type": "string",
-                        "value": "23:59"
-                    },
-                    "dayOfWeek":{
-                        "type": "string",
                         "value": "Monday"
                     }
                 },
@@ -1600,6 +1597,20 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
+                        "value": "Wednesday"
+                    }
+                },
+                {
+                    "opens" : {
+                        "type": "string", 
+                        "value": "00:01"
+                    },
+                    "closes": {
+                        "type": "string",
+                        "value": "23:59"
+                    },
+                    "dayOfWeek":{
+                        "type": "string",
                         "value": "Thursday"
                     }
                 },
@@ -1614,10 +1625,11 @@
                     },
                     "dayOfWeek":{
                         "type": "string",
-                        "value": "Wednesday"
+                        "value": "Friday"
                     }
                 }
-            ]  
+                
+            ]
         }
     }
 ]

@@ -28,6 +28,7 @@ def get_entities(arguments: Dict[str, str], zoomRules: ZoomRules = ZoomRules(), 
     # get all requested objects
     objects: List[any] = get_objects(arguments)
 
+
     # divide objets with type as key
     type_to_objects: DefaultDict[str, List[any]] = defaultdict(list)
     for obj in objects: 

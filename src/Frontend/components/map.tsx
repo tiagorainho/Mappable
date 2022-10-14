@@ -38,8 +38,7 @@ const Map = () => {
   }
 
   useEffect(() => {
-    console.log(zoom)
-    fetch(`${ENDPOINT}/objects?zoom=${zoom}`, {method: 'GET'})
+    fetch(`${ENDPOINT}/clusters?zoom=${zoom}`, {method: 'GET'})
       .then((res) => res.json())
       .then((data) => {
         const objects = data.objects.map((obj: DataModelType) => ModelFactory.createObject(obj))
@@ -57,6 +56,14 @@ const Map = () => {
       .catch((data) => (<>Error Loading map information</>))
       setUpdateMap(false)
   }, [updateMap])
+
+  // update map each REFRESH_MS
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUpdateMap(true)
+    }, REFRESH_MS);
+    return () => clearInterval(interval);
+  }, []);
 
 
   if(isLoading) return <Spinner/>

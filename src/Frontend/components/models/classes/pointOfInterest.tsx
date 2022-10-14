@@ -1,10 +1,10 @@
-import { DataModel } from '../dataModel';
+import { DataModel , BASE_ICONS} from '../dataModel';
 
 export class PointOfInterest extends DataModel {
     description: string
     seeAlso: string[]
 
-    static iconUrl = "person.svg"
+    static iconUrl = "marker.svg"
 
     constructor(
         arg: any
@@ -24,7 +24,10 @@ export class PointOfInterest extends DataModel {
 const PointOfInterestPopup = (poi: PointOfInterest, coordinate: number[]) => {
     return (
       <>
-        <h1>PointOfInterestPopup!</h1>
+        <img title="Ponto de Interesse" style={{display: "inline", width: "8%", marginRight: "5px", marginBottom: "5px"}} src={`${BASE_ICONS}/point.svg`}></img>
+        <span style={{color:"#457685",fontSize: "initial"}}>{poi.name}</span>
+        <h1>Ponto de Interesse</h1>
+        
       </>
     )
   }

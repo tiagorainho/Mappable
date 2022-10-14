@@ -33,7 +33,7 @@
         "id": "hospital-park-spot14",
         "type": "ParkingSpot",
         "status": {
-            "value": "free",
+            "value": "occupied",
             "metadata": {
                 "timestamp": {
                     "type": "DateTime",
@@ -183,7 +183,7 @@
         "id": "hospital-park-spot42",
         "type": "ParkingSpot",
         "status": {
-            "value": "free",
+            "value": "occupied",
             "metadata": {
                 "timestamp": {
                     "type": "DateTime",

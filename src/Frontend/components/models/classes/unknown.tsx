@@ -1,8 +1,8 @@
-import { DataModel } from "../dataModel";
+import { DataModel  , BASE_ICONS} from "../dataModel";
 
 export class Unknown extends DataModel {
 
-    static iconUrl = "beach.svg"
+    static iconUrl = "busstop.svg"
     
     constructor(
         arg: any
