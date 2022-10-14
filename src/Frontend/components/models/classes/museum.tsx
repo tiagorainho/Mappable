@@ -3,7 +3,7 @@ import { DataModel , BASE_ICONS } from '../dataModel';
 export class Museum extends DataModel {
     address: string
     description: string
-    type: string[]
+    museumType: string[]
     openingHours: {
         'dayOfWeek': string,
         "closes": string,
@@ -17,11 +17,11 @@ export class Museum extends DataModel {
     constructor(
         arg: any
     ) {
-        super({id: arg.id, name: arg.name.value, icon: Museum.iconUrl, coordinates: [arg.location.value.coordinates]})
+        super({id: arg.id, type:arg.type, name: arg.name.value, icon: Museum.iconUrl, coordinates: [arg.location.value.coordinates]})
 
         this.address = arg.address.value.streetAddress
         this.description = arg.description.value
-        this.type = arg.museumType.value
+        this.museumType = arg.museumType.value
         this.openingHours = arg.openingHoursSpecification.value
         this.facilities = arg.facilities.value
         this.artperiod = arg.artPeriod.value
@@ -39,7 +39,7 @@ const MuseumPopup = (museum: Museum, coordinate: number[]) => {
         <>
             <img title="Museu" style={{display: "inline", width: "10%", marginRight: "5px"}} src={`${BASE_ICONS}/museum_mini.svg`}></img>
             <span style={{color:"#457685",fontSize: "initial"}}>{museum.name}</span>
-            <h1><b>Tipo:</b> {museum.type}</h1>
+            <h1><b>Tipo:</b> {museum.museumType}</h1>
             
             <h1><b>Período de Arte:</b> {museum.artperiod}</h1>
            

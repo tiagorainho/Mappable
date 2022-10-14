@@ -24,7 +24,7 @@ export class PublicTransportStop extends DataModel {
     constructor(
         arg: any
     ) {
-        super({id: arg.id, name: arg.name.value, icon: PublicTransportStop.iconUrl, coordinates: [arg.location.value.coordinates]})
+        super({id: arg.id, type:arg.type, name: arg.name.value, icon: PublicTransportStop.iconUrl, coordinates: [arg.location.value.coordinates]})
         
         this.wheelchairAccessible = arg.wheelchairAccessible.value
         this.peopleCount = arg.peopleCount.value

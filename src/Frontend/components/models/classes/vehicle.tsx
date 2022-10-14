@@ -19,7 +19,7 @@ export class Vehicle extends DataModel {
     constructor(
         arg: any
     ) {
-        super({id: arg.id, name: arg.name.value, icon: Vehicle.iconUrl, coordinates: [arg.location.value.coordinates]})
+        super({id: arg.id, type:arg.type, name: arg.name.value, icon: Vehicle.iconUrl, coordinates: [arg.location.value.coordinates]})
 
         this.cargoWeight = arg.cargoWeight.value
         this.category = arg.category.value
