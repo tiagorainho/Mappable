@@ -3,8 +3,6 @@ import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import "leaflet-defaulticon-compatibility";
 import { useState, useEffect } from 'react'
-import { DataModelType, ModelFactory } from './models/factory';
-import { DataModel } from './models/dataModel';
 import { Spinner } from './spinner';
 import { CENTER_DEFAULT, ENDPOINT, REFRESH_MS, ZOOM_DEFAULT } from '../env';
 import { HeatmapLayer } from 'react-leaflet-heatmap-layer-v3';
@@ -12,7 +10,7 @@ import { HeatmapLayer } from 'react-leaflet-heatmap-layer-v3';
 const gradient = { 0.4: "red", 0.8: "red", 1.0: "red" };
 
 
-const Map = () => {
+const Map = (typeOfObjects: any) => {
   let ZOOM_LEVEL = ZOOM_DEFAULT
 
   let [markers, setMarkers]  = useState([])

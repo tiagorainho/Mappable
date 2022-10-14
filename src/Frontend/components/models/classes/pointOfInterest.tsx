@@ -9,7 +9,7 @@ export class PointOfInterest extends DataModel {
     constructor(
         arg: any
     ) {
-        super({id: arg.id, type:arg.type, name: arg.name.value, icon: PointOfInterest.iconUrl, coordinates: [arg.location.value.coordinates]})
+        super({id: arg.id, type:arg.type, cluster_icon:"cluster_poi.svg", name: arg.name.value, icon: PointOfInterest.iconUrl, coordinates: [arg.location.value.coordinates]})
 
         this.description = arg.description.value
         this.seeAlso = arg.refSeeAlso.value
