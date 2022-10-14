@@ -53,10 +53,7 @@ const MapHandler = (props: Props) => {
                             <MapPinIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
                             Live
                         </div>
-                        <div className="mt-2 flex items-center text-sm text-gray-500">
-                            <ChartBarIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
-                            18 &ndash; 65
-                        </div>
+                        
                     </div>
                 </div>
                 <div>
