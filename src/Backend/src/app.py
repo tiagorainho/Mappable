@@ -1,21 +1,24 @@
-
-from types import MethodType
 from flask import Flask, Response, request
-import json, requests
+import json
 from flask_cors import CORS
+from services.user_service import ROLES
+from services.rules import ZoomRules
+from services.zoom_scaller_service import DEFAULT_ZOOM, get_entities
 
 app = Flask(__name__)
 app.config['CORS_HEADERS'] = 'Content-Type'
 CORS(app)
 
-url = "http://localhost:1026/v2/entities"
-
 @app.route('/objects', methods=['GET'])
 def get_objects():
-    response = requests.get(url, params=request.args)
-    objects = response.json()
+    arguments = request.args
+    zoom = int(arguments.get("zoom", 5))
+    role = arguments.get("type", "normal")
+    print(zoom, role)
+    entities = get_entities(arguments = arguments, zoomRules=ROLES[role], zoom=zoom)
+
     return Response(
-        json.dumps(objects),
+        json.dumps(entities),
         status=200,
         mimetype="application/json"
     )
