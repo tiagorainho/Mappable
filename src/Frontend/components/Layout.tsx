@@ -18,7 +18,7 @@ const Layout = ({ children, title = 'Mappable' }: Props) => (
     </Head>
 
     <div className="flex flex-col h-screen justify-between">
-    <Navbar/>
+    {/* <Navbar/> */}
       <div className="mb-auto h-full flex-grow">
         {children}
       </div>
