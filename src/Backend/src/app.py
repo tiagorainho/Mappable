@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config['CORS_HEADERS'] = 'Content-Type'
 CORS(app)
 
-url = "http://localhost:1026/v2/entities"
+url = "http://localhost:1026/v2/entities?type=Vehicle"
 
 @app.route('/objects', methods=['GET'])
 def get_objects():
