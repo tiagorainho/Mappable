@@ -23,7 +23,7 @@ const Map = () => {
     setLoading(true)
     const interval = setInterval(() => {
       
-      fetch(`${ENDPOINT}/objects`, {method: 'GET'})
+      fetch(`${ENDPOINT}/objects?type=Vehicle`, {method: 'GET'})
         .then((res) => res.json())
         .then((data) => {
           data = data.map((obj : any) => obj.location.value.coordinates)

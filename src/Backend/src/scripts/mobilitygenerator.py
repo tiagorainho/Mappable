@@ -8,7 +8,7 @@ url = 'http://localhost:1026/v2/entities'
 
 def worker(coords, url_patch, bus):
     current = randrange(0, len(lines))
-    while True:            
+    while True:
         #change location
         location = bus["location"]
         location["value"]["coordinates"] = coords[current]

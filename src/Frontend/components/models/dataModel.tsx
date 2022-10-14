@@ -1,6 +1,7 @@
 
 import { Icon } from 'leaflet';
 import { Marker, Popup } from 'react-leaflet';
+import { Cluster } from './cluster';
 
 export const BASE_ICONS = "../../../static/assets/icons"
 
@@ -15,6 +16,7 @@ export abstract class DataModel {
   id: string
   name: string
   icon: Icon
+  cluster_icon: Icon
   coordinates: number[][]
 
   constructor(
@@ -26,7 +28,23 @@ export abstract class DataModel {
       iconUrl: `${BASE_ICONS}/${arg.icon}`,
       iconSize: [25, 25]
     });
+    this.cluster_icon = new Icon({
+      iconUrl: `${BASE_ICONS}/cluster.svg`,
+      iconSize: [25, 25]
+    })
     this.coordinates = arg.coordinates
+  }
+
+  cluster(cluster: Cluster): JSX.Element {
+    return <></>
+  }
+
+  cluster_popup(cluster: Cluster): JSX.Element {
+    return (
+      <>
+        Sou o {cluster.dataModel.id}
+      </>
+    )
   }
 
   marker(): JSX.Element {
@@ -65,7 +83,9 @@ export const GenericPopup = (data: DataModelPopupType) => {
     <>
       <Popup>
         <div className="text-gray-700">
-          <span><span className="font-semibold">ID: </span><span className="">{data.model.id}</span></span>
+          <span>
+            <span className="font-semibold">ID: </span><span className="">{data.model.id}</span>
+          </span>
         </div>
         
         <hr className="my-2"></hr>

@@ -29,6 +29,11 @@ export type DataModelType = {
     licensePlate: string
 }
 
+export type typeClusterType = {
+    objects: DataModelType[]
+    center: number[]
+}
+
 export class ModelFactory {
 
     static switch_coordinates(coordinates: number[]): number[] {
