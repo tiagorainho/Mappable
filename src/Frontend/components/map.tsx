@@ -1,38 +1,62 @@
-import { MapContainer, TileLayer } from 'react-leaflet'
+import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import "leaflet-defaulticon-compatibility";
 import { useState, useEffect } from 'react'
-import { DataModelType, ModelFactory } from './models/factory';
+import { DataModelType, ModelFactory, typeClusterType } from './models/factory';
 import { DataModel } from './models/dataModel';
 import { Spinner } from './spinner';
 import { CENTER_DEFAULT, ENDPOINT, REFRESH_MS, ZOOM_DEFAULT } from '../env';
+import { Cluster } from './models/cluster';
+
+interface Props {
+  save: (new_value:number) => void;
+}
+
+const UpdateZoom = (prop: Props) => {
+  const map = useMapEvents ({
+    zoomend: () => {
+      const aux = map.getZoom()
+      prop.save(aux)
+    }
+  })
+  return <></>
+}
 
 const Map = () => {
-  let ZOOM_LEVEL = ZOOM_DEFAULT
 
-  let [markers, setMarkers]  = useState<DataModel[]>([])
-  let [isLoading, setLoading] = useState(false)
-  let [center, setCenter] = useState(CENTER_DEFAULT)
+  const [markers, setMarkers]  = useState<DataModel[]>([])
+  const [clusters, setClusters]  = useState<Cluster[]>([])
+  const [isLoading, setLoading] = useState<boolean>(false)
+  const [center, setCenter] = useState(CENTER_DEFAULT)
+  const [zoom, setZoom] = useState<number>(ZOOM_DEFAULT)
+  const [updateMap, setUpdateMap] = useState<boolean>(false)
+
+  const saveZoom = (new_value:number) => {
+    setZoom(new_value)
+    setUpdateMap(true)
+  }
 
   useEffect(() => {
-    setLoading(true)
-    const interval = setInterval(() => {
-      
-      fetch(`${ENDPOINT}/objects`, {method: 'GET'})
-        .then((res) => res.json())
-        .then((data) => {
-          data = data.map((obj: DataModelType) => ModelFactory.createObject(obj))
-          console.log(data)
-          setMarkers(data)
-          setLoading(false)
+    console.log(zoom)
+    fetch(`${ENDPOINT}/objects?zoom=${zoom}`, {method: 'GET'})
+      .then((res) => res.json())
+      .then((data) => {
+        const objects = data.objects.map((obj: DataModelType) => ModelFactory.createObject(obj))
+
+        const clusters_data = data.clusters.map((cluster: typeClusterType) => {
+          const data_models = cluster.objects.map((obj: DataModelType) => ModelFactory.createObject(obj))
+          return new Cluster(data_models, [cluster.center[1], cluster.center[0]])
         })
-    }, REFRESH_MS)
-    
-    return () => {
-        clearInterval(interval);
-    };
-  }, [])
+
+        setMarkers(objects)
+        setClusters(clusters_data)
+
+        setLoading(false)
+      })
+      .catch((data) => (<>Error Loading map information</>))
+      setUpdateMap(false)
+  }, [updateMap])
 
 
   if(isLoading) return <Spinner/>
@@ -41,7 +65,7 @@ const Map = () => {
     <>
       <MapContainer
         center={[center.lat, center.lng]}
-        zoom={ZOOM_LEVEL}
+        zoom={zoom}
         scrollWheelZoom={true}
         style={{ height: "100%", width: "100%", zIndex: 0 }}
       >
@@ -49,9 +73,12 @@ const Map = () => {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='https://tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
-        
-        {markers.map(e => e.marker())}
-          
+
+        {markers.map(m => m.marker())}
+        {clusters.map(c => c.cluster())}
+
+        <UpdateZoom save={saveZoom} />
+
       </MapContainer>
     </>
   )
