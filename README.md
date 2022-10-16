@@ -41,6 +41,66 @@ Then start the Frontend application
 
 ---
 
+## How to use
+
+### Markers
+
+In a new .tsx file create a class which extends DataModel.tsx, then implement the required functions:
+
+```typescript
+export class ExampleModel extends DataModel {
+  important_number: number
+  
+  static iconUrl = "example_marker_icon.svg"
+  static clusterIconUrl = "example_cluster_icon.svg"
+
+  constructor(
+        arg: any
+    ) {
+        super(
+          {
+            id: arg.id, 
+            type:arg.type,
+            icon: ExampleModel.iconUrl,
+            cluster_icon: ExampleModel.clusterIconUrl,
+            name: arg.name.value,
+            coordinates: [arg.location.value.coordinates]
+          }
+        )
+
+        this.important_number = arg.important_number
+    }
+
+  cluster(cluster: Cluster): JSX.Element {
+    ...
+  }
+
+  cluster_popup(cluster: Cluster): JSX.Element {
+    ...
+  }
+
+  marker(): JSX.Element {
+    ...
+  }
+
+  popup(coordinate: number[]): JSX.Element {
+    return ExampleModelPopup(this, coordinate)
+  }
+
+}
+
+const ExampleModelPopup = (model: ExampleModel, coordinate: number[]) => {
+  return (
+    <>
+      <h1>{model.id}</h1>
+      <h4>{model.name}</h4>
+      <hr/>
+      <span>{model.important_number}</span>
+    </>
+  )
+}
+```
+
 ## Demo
 
 https://user-images.githubusercontent.com/49039023/196045622-92887863-5bbf-4064-9122-a3503f9a8c25.mp4
