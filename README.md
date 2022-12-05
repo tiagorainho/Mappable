@@ -1,5 +1,8 @@
 # Mappable
 
+## Demo
+
+https://user-images.githubusercontent.com/49039023/196045622-92887863-5bbf-4064-9122-a3503f9a8c25.mp4
 
 ## Setup environment
 
@@ -100,10 +103,6 @@ const ExampleModelPopup = (model: ExampleModel, coordinate: number[]) => {
   )
 }
 ```
-
-## Demo
-
-https://user-images.githubusercontent.com/49039023/196045622-92887863-5bbf-4064-9122-a3503f9a8c25.mp4
 
 
 Enjoy :)
